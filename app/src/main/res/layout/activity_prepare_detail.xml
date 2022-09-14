@@ -26,9 +26,9 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="377dp"
-        android:layout_height="642dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="364dp"
+        android:layout_height="592dp"
+        android:layout_marginTop="64dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btnDone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +48,8 @@
 
             <TextView
                 android:id="@+id/lblStdname"
-                android:layout_width="358dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
                 android:text="Name of Student :"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -245,7 +245,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2v"
         app:layout_constraintVertical_bias="0.954"
         tools:ignore="UnknownId" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,23 +8,37 @@
     tools:context=".DetailActivity">
 
     <TextView
+        android:id="@+id/delRollNo"
+        android:layout_width="166dp"
+        android:layout_height="33dp"
+        android:text="Roll No:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvLanguage"
+        app:layout_constraintEnd_toStartOf="@+id/btnDel"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/tvLanguage"
-        android:layout_width="113dp"
+        android:layout_width="119dp"
         android:layout_height="35dp"
         android:text="Language :"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.346" />
 
     <TextView
         android:id="@+id/tvSubject"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="151dp"
+        android:layout_height="33dp"
         android:text="Subject :"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -33,12 +47,12 @@
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLanguage"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/tvHODRemarks"
-        android:layout_width="146dp"
-        android:layout_height="26dp"
+        android:layout_width="184dp"
+        android:layout_height="27dp"
         android:text="HOD Remarks ..."
         android:textSize="16sp"
         android:textStyle="bold"
@@ -51,16 +65,14 @@
 
     <Button
         android:id="@+id/btnDel"
-        android:layout_width="94dp"
-        android:layout_height="51dp"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="28dp"
         android:background="#DFD6EF"
         android:text="Delete"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toEndOf="@+id/tvLanguage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

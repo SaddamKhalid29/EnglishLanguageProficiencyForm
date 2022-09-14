@@ -166,9 +166,25 @@ public class Language {
         this.subject=subject;
         this.hodRemarks=hodRemarks;
     }
+    public Language(int id,String rollNo,String email,String firstName,String  lastName, String date,String Department
+            ,String language, String contactNo, String cnicNo, String registrationNo, String subject, String hodRemarks){
+        this.id=id;
+        this.rollNo=rollNo;
+        this.email=email;
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.date=date;
+        this.Department=Department;
+        this.language=language;
+        this.contactNo=contactNo;
+        this.cnicNo=cnicNo;
+        this.registrationNo=registrationNo;
+        this.subject=subject;
+        this.hodRemarks=hodRemarks;
+    }
     //toString Method
     @Override
     public String toString() {
-        return "language= "+language+", subject= " + subject +", hodRemarks= " + hodRemarks +"\n" ;
+        return "rollNo="+rollNo+", language= "+language+", subject= " + subject +", hodRemarks= " + hodRemarks +"\n" ;
     }
 }

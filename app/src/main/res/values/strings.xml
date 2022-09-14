@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login Application</string>
+    <string name="app_name">Language Proficiency</string>
     <array name="Department">
         <item>Computer Science</item>
         <item>Information Technology</item>

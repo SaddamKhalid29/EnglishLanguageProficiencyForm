@@ -1,9 +1,12 @@
 package com.example.loginapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,6 +23,7 @@ public class PrepareDetailActivity extends AppCompatActivity implements AdapterV
     Spinner etDepartment,etLang;
     Button btnDone;
     String depart;
+    EditText etUsername,etPass;
     String language;
     DBHelper db=new DBHelper(this);
     @Override
@@ -31,6 +35,8 @@ public class PrepareDetailActivity extends AppCompatActivity implements AdapterV
         rollNo=findViewById(R.id.rollNo);
         email=findViewById(R.id.etEmail);
         etDepartment=findViewById(R.id.department);
+        etUsername=findViewById(R.id.etUserName);
+        etPass=findViewById(R.id.etPassword);
 
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getApplicationContext(),R.array.Department, android.R.layout.simple_list_item_1);
         adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
@@ -87,6 +93,29 @@ public class PrepareDetailActivity extends AppCompatActivity implements AdapterV
             }
         });
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.getMenuInflater().inflate(R.menu.context_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+                PrepareDetailActivity.this.finish();
+                etUsername.setText("");
+                etPass.setText("");
+                break;
+            case R.id.profile:
+                break;
+            case R.id.setting:
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 
     @Override

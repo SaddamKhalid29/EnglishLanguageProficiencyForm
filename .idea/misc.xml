@@ -6,15 +6,18 @@
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.152" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/drawable/btn_bg.xml" value="0.152" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.152" />
+        <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout-land/activity_home.xml" value="0.20949123557075675" />
+        <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout-sw600dp/activity_home.xml" value="0.14646214745175656" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout-sw600dp/activity_prepare_detail.xml" value="0.19140625" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_detail.xml" value="0.20949123557075675" />
-        <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_home.xml" value="0.20949123557075675" />
+        <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_language_form_detai.xml" value="0.20949123557075675" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_main.xml" value="0.2552083333333333" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_prepare_detail.xml" value="0.20949123557075675" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_register.xml" value="0.20949123557075675" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/activity_to_do_items.xml" value="0.20949123557075675" />
         <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/layout/getid.xml" value="0.20863616930312098" />
+        <entry key="..\:/6th Semester/MAD/LoginApplication/app/src/main/res/menu/context_menu.xml" value="0.20863616930312098" />
       </map>
     </option>
   </component>

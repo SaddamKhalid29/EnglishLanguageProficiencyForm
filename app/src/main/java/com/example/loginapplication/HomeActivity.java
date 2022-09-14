@@ -1,17 +1,22 @@
 package com.example.loginapplication;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Date;
@@ -20,9 +25,16 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     Button btnAdd,btnDel,btnDone;
+//    public Context context;
 
-    RVAdapter adapter=new RVAdapter();
+    RVAdapter adapter=new RVAdapter(this);
     DBHelper dbHelper=new DBHelper(this);
+
+//    public HomeActivity(Context context) {
+//        this.context=context;
+//    }
+
+    EditText etUsername,etPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +45,12 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyleViewer);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
+        etUsername=findViewById(R.id.etUserName);
+        etPass=findViewById(R.id.etPassword);
         //To get the data
         Cursor cursor = dbHelper.getAllData();
         while (cursor.moveToNext()) {
-            Language language = new Language(cursor.getString(3), cursor.getString(4), cursor.getString(1),
+            Language language = new Language(cursor.getInt(0),cursor.getString(3), cursor.getString(4), cursor.getString(1),
                     cursor.getString(2), cursor.getString(7), cursor.getString(5), cursor.getString(6),
                     cursor.getString(8), cursor.getString(10), cursor.getString(9), cursor.getString(11), cursor.getString(12));
             adapter.languageList.add(language);
@@ -53,6 +66,30 @@ public class HomeActivity extends AppCompatActivity {
                 startActivityForResult(intent, 345);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.getMenuInflater().inflate(R.menu.context_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+            HomeActivity.this.finish();
+            etUsername.setText("");
+            etPass.setText("");
+                break;
+            case R.id.profile:
+                break;
+            case R.id.setting:
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 
     @Override
@@ -73,7 +110,7 @@ public class HomeActivity extends AppCompatActivity {
                 String hodRemarks=data.getStringExtra("Hod Remarks");
                   Log.i("English","The resultcode is  : "+resultCode);
 
-                adapter.languageList.add(new Language(language,subj,hodRemarks));
+                adapter.languageList.add(new Language(rollNo,language,subj,hodRemarks));
                 recyclerView.scrollToPosition(adapter.languageList.size()-1);
                 Log.i("English","The resultcode is  added: "+adapter.languageList.size()+1);
                 adapter.notifyDataSetChanged();
